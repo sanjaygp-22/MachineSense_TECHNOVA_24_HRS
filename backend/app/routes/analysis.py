@@ -142,8 +142,16 @@ async def analyze_audio(
             **analysis_result
         }
 
-        # Cache in-memory for fast spectrogram image retrieval
+        # Cache in-memory and write to disk for persistent spectrogram image retrieval
         store_analysis(analysis_id, full_response, spectrogram_png)
+        try:
+            spec_dir = UPLOAD_DIR / "spectrograms"
+            spec_dir.mkdir(parents=True, exist_ok=True)
+            spec_file = spec_dir / f"{analysis_id}.png"
+            with open(spec_file, "wb") as f_spec:
+                f_spec.write(spectrogram_png)
+        except Exception as spec_err:
+            logger.error(f"Error saving spectrogram PNG to disk: {spec_err}")
 
         # Persist to SQLite Database (idempotent primary key save)
         try:
@@ -197,6 +205,15 @@ async def analyze_audio(
 @router.get("/analysis/{analysis_id}/spectrogram")
 def get_spectrogram_image(analysis_id: str):
     png_bytes = get_spectrogram_png(analysis_id)
+    if not png_bytes:
+        spec_file = UPLOAD_DIR / "spectrograms" / f"{analysis_id}.png"
+        if spec_file.exists():
+            try:
+                with open(spec_file, "rb") as f_spec:
+                    png_bytes = f_spec.read()
+            except Exception:
+                pass
+
     if not png_bytes:
         raise HTTPException(
             status_code=status.HTTP_404_NOT_FOUND,

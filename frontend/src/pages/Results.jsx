@@ -288,22 +288,34 @@ export default function Results() {
             </p>
           </div>
 
-          <div className="w-full md:w-80">
-            <WaveformVisualizer />
+          <div className="w-full md:w-96">
+            <WaveformVisualizer samples={analysisData?.waveform?.samples || []} />
           </div>
         </section>
 
+        {/* Log-Mel Spectrogram Analysis Panel */}
+        {analysisData?.spectrogram?.url && (
+          <section className="tech-border bg-surface-container rounded-lg p-6 flex flex-col gap-4">
+            <div className="flex justify-between items-center border-b border-outline-variant pb-2">
+              <span className="font-label-caps text-label-caps text-on-surface-variant uppercase tracking-widest font-bold flex items-center gap-2">
+                <span className="material-symbols-outlined text-[18px] text-primary-fixed-dim">graphic_eq</span>
+                Log-Mel Acoustic Spectrogram
+              </span>
+              <span className="font-data-sm text-data-sm text-on-surface-variant font-mono">168 Mel Bins • dB Power Scale</span>
+            </div>
+
+            <div className="rounded border border-outline-variant bg-[#0d1516] flex items-center justify-center p-2 overflow-hidden">
+              <img
+                src={`${API_URL}${analysisData.spectrogram.url}`}
+                alt="Log-Mel Spectrogram"
+                className="w-full h-auto object-contain max-h-[360px] rounded"
+              />
+            </div>
+          </section>
+        )}
+
         {/* Bottom Actions Row */}
         <div className="flex flex-col sm:flex-row gap-4 justify-end">
-          {analysisData?.spectrogram?.url && (
-            <button
-              onClick={() => setShowSpectrogramModal(true)}
-              className="bg-surface-container-high border border-outline-variant text-on-surface font-body-sm text-body-sm font-bold py-3 px-6 rounded hover:bg-surface-variant transition-colors cursor-pointer flex items-center justify-center gap-2"
-            >
-              <span className="material-symbols-outlined text-[18px]">graphic_eq</span>
-              View Log-Mel Spectrogram
-            </button>
-          )}
           <button
             onClick={() => navigate('/analyze')}
             className="bg-primary-container text-on-primary-container font-body-sm text-body-sm font-bold py-3 px-6 rounded soft-cyan-glow hover:bg-primary-fixed transition-all cursor-pointer flex items-center justify-center gap-2"
