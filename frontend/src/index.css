@@ -1,0 +1,169 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root, .light {
+  --background: #f8fafc;
+  --surface: #ffffff;
+  --surface-secondary: #f1f5f9;
+  --surface-elevated: #ffffff;
+  --text-primary: #0f172a;
+  --text-secondary: #475569;
+  --text-muted: #94a3b8;
+  --border: #cbd5e1;
+  --border-subtle: #e2e8f0;
+  --accent: #00e5ff;
+  --accent-secondary: #00b8d4;
+  --success: #059669;
+  --warning: #d97706;
+  --danger: #dc2626;
+  --info: #0284c7;
+  --input-background: #f8fafc;
+  --input-border: #cbd5e1;
+  --button-background: #00e5ff;
+  --button-text: #000000;
+  --sidebar-background: #ffffff;
+  --header-background: #ffffff;
+  --overlay: rgba(15, 23, 42, 0.4);
+  --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+  --grid-line: rgba(0, 0, 0, 0.06);
+}
+
+.dark {
+  --background: #111316;
+  --surface: #1e2023;
+  --surface-secondary: #1a1c1f;
+  --surface-elevated: #282a2d;
+  --text-primary: #e2e2e6;
+  --text-secondary: #bac9cc;
+  --text-muted: #849396;
+  --border: #3b494c;
+  --border-subtle: #282a2d;
+  --accent: #00e5ff;
+  --accent-secondary: #00daf3;
+  --success: #4edea3;
+  --warning: #ffb95f;
+  --danger: #ffb4ab;
+  --info: #38bdf8;
+  --input-background: #1a1c1f;
+  --input-border: #3b494c;
+  --button-background: #00e5ff;
+  --button-text: #00363d;
+  --sidebar-background: #1a1c1f;
+  --header-background: #111316;
+  --overlay: rgba(0, 0, 0, 0.75);
+  --shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+  --grid-line: rgba(132, 147, 150, 0.15);
+}
+
+@layer base {
+  body {
+    background-color: var(--background);
+    color: var(--text-primary);
+    min-height: 100vh;
+    overflow-x: hidden;
+    font-family: 'Inter', sans-serif;
+    transition: background-color 0.2s ease, color 0.2s ease;
+  }
+}
+
+.material-symbols-outlined {
+  font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+}
+
+.icon-fill {
+  font-variation-settings: 'FILL' 1, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+}
+
+/* MachineSense Technical Blueprint Outlines & Grids */
+.tech-border {
+  border: 1px solid var(--border);
+  transition: border-color 0.2s ease, background-color 0.2s ease;
+}
+
+.technical-grid {
+  background-size: 20px 20px;
+  background-image: linear-gradient(to right, var(--grid-line) 1px, transparent 1px),
+                    linear-gradient(to bottom, var(--grid-line) 1px, transparent 1px);
+}
+
+.soft-cyan-glow {
+  box-shadow: 0 0 12px rgba(0, 229, 255, 0.45);
+}
+.soft-cyan-glow:hover {
+  box-shadow: 0 0 18px rgba(0, 229, 255, 0.65);
+}
+
+/* Radial Progress Ring */
+.radial-progress {
+  background: conic-gradient(var(--success) var(--value), var(--border-subtle) 0);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.3s ease;
+}
+.radial-progress::before {
+  content: "";
+  position: absolute;
+  width: 80%;
+  height: 80%;
+  background-color: var(--surface);
+  border-radius: 50%;
+  transition: background-color 0.2s ease;
+}
+
+/* Pulse dots */
+.pulse-dot {
+  animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: .5; transform: scale(1.2); }
+}
+
+.pulse-ring {
+  animation: pulse-ring 2s cubic-bezier(0.215, 0.61, 0.355, 1) infinite;
+}
+@keyframes pulse-ring {
+  0% { transform: scale(0.95); opacity: 0.5; }
+  50% { transform: scale(1.1); opacity: 0.8; }
+  100% { transform: scale(0.95); opacity: 0.5; }
+}
+
+/* Scanning effect for AI Processing */
+@keyframes scan-line {
+  0% { top: 0; opacity: 0; }
+  10% { opacity: 1; }
+  90% { opacity: 1; }
+  100% { top: 100%; opacity: 0; }
+}
+
+.scanning-effect::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: var(--accent);
+  box-shadow: 0 0 10px var(--accent);
+  animation: scan-line 3s linear infinite;
+  z-index: 10;
+}
+
+/* Custom Scrollbars */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: var(--background);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--border);
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--text-muted);
+}

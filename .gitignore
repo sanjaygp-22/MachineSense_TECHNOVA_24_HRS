@@ -1,0 +1,41 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+venv/
+ENV/
+.venv/
+backend/.venv/
+.pytest_cache/
+
+# Node / React
+node_modules/
+frontend/node_modules/
+frontend/dist/
+dist/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Environment & Secrets
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# Temp uploads & cache
+backend/uploads/*
+!backend/uploads/.gitkeep
+
+# Temp zips & extracted reference folders
+*.zip
+zip_extracted/
+
+# IDE / OS
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db

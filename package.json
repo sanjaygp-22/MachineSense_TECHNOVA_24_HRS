@@ -1,0 +1,13 @@
+{
+  "name": "machinesense-root",
+  "private": true,
+  "version": "1.0.0",
+  "scripts": {
+    "dev:backend": "cd backend && .venv\\Scripts\\python.exe -m uvicorn app.main:app --port 8000 --reload",
+    "dev:frontend": "cd frontend && npm run dev",
+    "dev": "concurrently -k -n \"BACKEND,FRONTEND\" -c \"cyan,magenta\" \"npm run dev:backend\" \"npm run dev:frontend\""
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  }
+}
