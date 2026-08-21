@@ -1,0 +1,6 @@
+held_out_machine,epochs_trained,early_stopped,test_samples,test_normal,test_abnormal,accuracy,precision,abnormal_recall,f1_score,roc_auc,TN_normal_correct,FP_normal_wrong,TP_abnormal_correct,FN_abnormal_wrong
+id_00,6,True,1149,1006,143,0.8564,0.458,0.8392,0.5926,0.8879,864,142,120,23
+id_02,20,True,1116,1005,111,0.1066,0.0995,0.991,0.1808,0.7314,9,996,110,1
+id_04,30,False,802,702,100,0.1247,0.1237,0.99,0.22,0.2335,1,701,99,1
+id_06,13,True,1138,1036,102,0.1555,0.096,1.0,0.1751,0.6188,75,961,102,0
+OVERALL_ALL_FOLDS,-,-,4205,3749,456,0.3282,0.1334,0.9452,0.2338,0.5445,949,2800,431,25

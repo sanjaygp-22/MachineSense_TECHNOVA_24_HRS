@@ -1,0 +1,19 @@
+=== VALIDATION SET CLASSIFICATION REPORT ===
+              precision    recall  f1-score   support
+
+      normal       0.98      1.00      0.99       562
+    abnormal       1.00      0.87      0.93        69
+
+    accuracy                           0.99       631
+   macro avg       0.99      0.93      0.96       631
+weighted avg       0.99      0.99      0.99       631
+
+=== TEST SET CLASSIFICATION REPORT ===
+              precision    recall  f1-score   support
+
+      normal       0.99      1.00      0.99       564
+    abnormal       0.98      0.91      0.95        67
+
+    accuracy                           0.99       631
+   macro avg       0.99      0.95      0.97       631
+weighted avg       0.99      0.99      0.99       631

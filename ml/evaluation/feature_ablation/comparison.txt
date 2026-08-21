@@ -1,0 +1,7 @@
+=== FEATURE ABLATION EXPERIMENT COMPARISON SUMMARY ===
+
+Feature Set               | Feats | Accuracy  | Precision | Abnorm Recall | F1-Score  | ROC-AUC 
+------------------------------------------------------------------------------------------
+Set A: ALL FEATURES       | 33    | 0.6635    | 0.1435    | 0.4232        | 0.2143    | 0.5770  
+Set B: REDUCED SPECTRAL   | 28    | 0.7253    | 0.1899    | 0.4693        | 0.2704    | 0.6443  
+Set C: COMPACT FEATURES   | 28    | 0.7253    | 0.1899    | 0.4693        | 0.2704    | 0.6443  

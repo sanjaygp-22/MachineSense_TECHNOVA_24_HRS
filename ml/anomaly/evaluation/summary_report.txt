@@ -1,0 +1,25 @@
+=== NORMAL-ONLY MEL-SPECTROGRAM AUTOENCODER LOMO EVALUATION SUMMARY ===
+CUDA Available: True
+GPU Device Name: NVIDIA GeForce RTX 4050 Laptop GPU
+Selected PyTorch Device: cuda
+Total Autoencoder Parameters: 185,857
+Total Training Execution Time: 929.78s
+Early Stopping Used: Active (Patience=5 epochs)
+
+Held-Out Machine Fold Results (95th Percentile Normal Validation Threshold):
+Asset [id_00]: Accuracy=0.8407, Precision=0.0833, Abnormal Recall=0.0280, F1=0.0419, ROC-AUC=0.2925 (Thresh=0.175691)
+Asset [id_02]: Accuracy=0.9158, Precision=0.7931, Abnormal Recall=0.2072, F1=0.3286, ROC-AUC=0.4799 (Thresh=0.175495)
+Asset [id_04]: Accuracy=0.1297, Precision=0.1013, Abnormal Recall=0.7600, F1=0.1788, ROC-AUC=0.2885 (Thresh=0.152743)
+Asset [id_06]: Accuracy=0.9095, Precision=0.0000, Abnormal Recall=0.0000, F1=0.0000, ROC-AUC=0.5989 (Thresh=0.172737)
+
+Overall Aggregated Performance:
+Accuracy: 0.7436
+Precision: 0.1244
+Abnormal Recall: 0.2259
+F1-Score: 0.1604
+ROC-AUC: 0.4939
+
+Prior Baseline Benchmarks:
+Random Forest LOMO: Accuracy 0.7253 | Abnormal Recall 0.4693 | F1 0.2704 | ROC-AUC 0.6443
+Supervised CNN LOMO: Accuracy 0.3282 | Abnormal Recall 0.9452 | F1 0.2338 | ROC-AUC 0.5445
+Autoencoder LOMO:   Accuracy 0.7436 | Abnormal Recall 0.2259 | F1 0.1604 | ROC-AUC 0.4939

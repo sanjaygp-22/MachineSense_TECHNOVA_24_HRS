@@ -1,0 +1,48 @@
+{
+  "model_name": "Machine-Invariant Random Forest (Subset D)",
+  "version": "1.0.0",
+  "num_features": 15,
+  "feature_names": [
+    "dominant_frequency_hz",
+    "mfcc_12_mean",
+    "mfcc_8_mean",
+    "mfcc_4_mean",
+    "mfcc_1_std",
+    "mfcc_5_mean",
+    "mfcc_9_mean",
+    "mfcc_3_mean",
+    "mfcc_2_std",
+    "mfcc_10_mean",
+    "mfcc_12_std",
+    "mfcc_11_std",
+    "mfcc_13_mean",
+    "mfcc_13_std",
+    "mfcc_3_std"
+  ],
+  "training_configuration": {
+    "n_estimators": 300,
+    "class_weight": "balanced",
+    "random_state": 42,
+    "scaling": "StandardScaler"
+  },
+  "dataset_information": {
+    "dataset_name": "MIMII Pump Dataset",
+    "total_recordings": 4205,
+    "normal_recordings": 3749,
+    "abnormal_recordings": 456,
+    "machine_ids": [
+      "id_00",
+      "id_02",
+      "id_04",
+      "id_06"
+    ]
+  },
+  "lomo_evaluation_metrics": {
+    "evaluation_protocol": "4-Fold Leave-One-Machine-Out Cross-Validation",
+    "accuracy": 0.7541,
+    "precision": 0.2387,
+    "abnormal_recall": 0.5789,
+    "f1_score": 0.338,
+    "roc_auc": 0.7273
+  }
+}

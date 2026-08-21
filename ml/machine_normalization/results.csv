@@ -1,0 +1,21 @@
+subset_name,held_out_machine,num_features,test_samples,accuracy,precision,abnormal_recall,f1_score,roc_auc,TN_normal_correct,FP_normal_wrong,TP_abnormal_correct,FN_abnormal_wrong
+Subset A: All Features,id_00,33,1149,0.8886,0.8261,0.1329,0.2289,0.8704,1002,4,19,124
+Subset A: All Features,id_02,33,1116,0.8889,0.4564,0.6126,0.5231,0.6661,924,81,68,43
+Subset A: All Features,id_04,33,802,0.7257,0.0312,0.04,0.0351,0.3053,578,124,4,96
+Subset A: All Features,id_06,33,1138,0.1714,0.0976,1.0,0.1779,0.7056,93,943,102,0
+Subset A: All Features,OVERALL_ALL_FOLDS,33,4205,0.6635,0.1435,0.4232,0.2143,0.577,2597,1152,193,263
+Subset B: Remove Top 5 Machine-Dep,id_00,28,1149,0.8895,1.0,0.1119,0.2013,0.8664,1006,0,16,127
+Subset B: Remove Top 5 Machine-Dep,id_02,28,1116,0.8862,0.4459,0.5946,0.5097,0.7151,923,82,66,45
+Subset B: Remove Top 5 Machine-Dep,id_04,28,802,0.8092,0.2151,0.2,0.2073,0.539,629,73,20,80
+Subset B: Remove Top 5 Machine-Dep,id_06,28,1138,0.3427,0.1182,0.9804,0.211,0.7897,290,746,100,2
+Subset B: Remove Top 5 Machine-Dep,OVERALL_ALL_FOLDS,28,4205,0.7253,0.1831,0.443,0.2591,0.6237,2848,901,202,254
+Subset C: Remove Top 10 Machine-Dep,id_00,23,1149,0.8877,1.0,0.0979,0.1783,0.8572,1006,0,14,129
+Subset C: Remove Top 10 Machine-Dep,id_02,23,1116,0.8593,0.3663,0.5676,0.4452,0.764,896,109,63,48
+Subset C: Remove Top 10 Machine-Dep,id_04,23,802,0.702,0.1965,0.45,0.2736,0.6123,518,184,45,55
+Subset C: Remove Top 10 Machine-Dep,id_06,23,1138,0.5694,0.1632,0.9216,0.2773,0.8397,554,482,94,8
+Subset C: Remove Top 10 Machine-Dep,OVERALL_ALL_FOLDS,23,4205,0.7586,0.218,0.4737,0.2985,0.6763,2974,775,216,240
+Subset D: Relatively Machine-Invariant,id_00,15,1149,0.9112,1.0,0.2867,0.4457,0.8481,1006,0,41,102
+Subset D: Relatively Machine-Invariant,id_02,15,1116,0.6918,0.1926,0.6577,0.298,0.7248,699,306,73,38
+Subset D: Relatively Machine-Invariant,id_04,15,802,0.8017,0.3234,0.54,0.4045,0.7089,589,113,54,46
+Subset D: Relatively Machine-Invariant,id_06,15,1138,0.623,0.185,0.9412,0.3092,0.8841,613,423,96,6
+Subset D: Relatively Machine-Invariant,OVERALL_ALL_FOLDS,15,4205,0.7541,0.2387,0.5789,0.338,0.7273,2907,842,264,192

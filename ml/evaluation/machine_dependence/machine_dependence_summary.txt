@@ -1,0 +1,27 @@
+=== MACHINE-ID DEPENDENCE ANALYSIS SUMMARY ===
+Total Recordings: 4205
+Machine-ID Classification Accuracy: 99.76%
+
+Top 10 Features Identifying Machine ID:
+   1. mfcc_6_mean               -> 0.1249
+   2. zero_crossing_rate        -> 0.0944
+   3. mfcc_2_mean               -> 0.0881
+   4. spectral_flatness         -> 0.0794
+   5. spectral_centroid_hz      -> 0.0595
+   6. mfcc_10_mean              -> 0.0579
+   7. spectral_bandwidth_hz     -> 0.0510
+   8. spectral_rolloff_hz       -> 0.0446
+   9. mfcc_5_mean               -> 0.0410
+  10. mfcc_11_mean              -> 0.0349
+
+ANOVA F-Test Top Machine-Varying Features:
+   1. zero_crossing_rate        -> F-Stat = 8082.06
+   2. spectral_centroid_hz      -> F-Stat = 7299.04
+   3. mfcc_2_mean               -> F-Stat = 6361.13
+   4. spectral_rolloff_hz       -> F-Stat = 5903.88
+   5. mfcc_11_mean              -> F-Stat = 3840.79
+   6. spectral_bandwidth_hz     -> F-Stat = 3820.93
+   7. mfcc_7_mean               -> F-Stat = 2899.76
+   8. spectral_flatness         -> F-Stat = 2527.15
+   9. mfcc_6_mean               -> F-Stat = 2442.27
+  10. mfcc_6_std                -> F-Stat = 2429.78

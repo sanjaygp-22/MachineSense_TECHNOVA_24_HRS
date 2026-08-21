@@ -1,0 +1,6 @@
+held_out_machine,train_samples,test_samples,test_normal,test_abnormal,accuracy,precision,abnormal_recall,f1_score,roc_auc,TN_normal_correct,FP_normal_wrong,TP_abnormal_correct,FN_abnormal_wrong
+id_00,3056,1149,1006,143,0.8886,0.8261,0.1329,0.2289,0.8704,1002,4,19,124
+id_02,3089,1116,1005,111,0.8889,0.4564,0.6126,0.5231,0.6661,924,81,68,43
+id_04,3403,802,702,100,0.7257,0.0312,0.04,0.0351,0.3052,578,124,4,96
+id_06,3067,1138,1036,102,0.1714,0.0976,1.0,0.1779,0.7056,93,943,102,0
+OVERALL_ALL_FOLDS,4205,4205,3749,456,0.6635,0.1435,0.4232,0.2143,0.577,2597,1152,193,263

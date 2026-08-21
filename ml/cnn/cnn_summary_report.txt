@@ -1,0 +1,20 @@
+=== GPU-ACCELERATED MEL-SPECTROGRAM CNN LOMO EVALUATION SUMMARY ===
+CUDA Available: True
+GPU Device Name: NVIDIA GeForce RTX 4050 Laptop GPU
+Selected PyTorch Device: cuda
+Total Parameters: 405,313
+Total Training Execution Time: 432.47s
+Early Stopping: Active (Patience=5 epochs)
+
+Held-Out Fold Results:
+Asset [id_00]: Accuracy=0.8564, Precision=0.4580, Abnormal Recall=0.8392, F1=0.5926, ROC-AUC=0.8879
+Asset [id_02]: Accuracy=0.1066, Precision=0.0995, Abnormal Recall=0.9910, F1=0.1808, ROC-AUC=0.7314
+Asset [id_04]: Accuracy=0.1247, Precision=0.1237, Abnormal Recall=0.9900, F1=0.2200, ROC-AUC=0.2335
+Asset [id_06]: Accuracy=0.1555, Precision=0.0960, Abnormal Recall=1.0000, F1=0.1751, ROC-AUC=0.6188
+
+Overall Aggregated Performance:
+Accuracy: 0.3282
+Precision: 0.1334
+Abnormal Recall: 0.9452
+F1-Score: 0.2338
+ROC-AUC: 0.5445

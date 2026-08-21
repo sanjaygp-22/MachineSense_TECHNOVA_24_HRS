@@ -1,0 +1,6 @@
+held_out_machine,epochs_trained,early_stopped,threshold_95_val,test_samples,test_normal,test_abnormal,normal_mse_mean,normal_mse_median,abnormal_mse_mean,abnormal_mse_median,accuracy,precision,abnormal_recall,f1_score,roc_auc,TN_normal_correct,FP_normal_wrong,TP_abnormal_correct,FN_abnormal_wrong
+id_00,30,False,0.175691,1149,1006,143,0.135545,0.131308,0.114391,0.112612,0.8407,0.0833,0.028,0.0419,0.2925,962,44,4,139
+id_02,30,False,0.175495,1116,1005,111,0.117422,0.114717,0.130738,0.11036,0.9158,0.7931,0.2072,0.3286,0.4799,999,6,23,88
+id_04,30,False,0.152743,802,702,100,0.201272,0.19899,0.179026,0.174041,0.1297,0.1013,0.76,0.1788,0.2885,28,674,76,24
+id_06,30,False,0.172737,1138,1036,102,0.060832,0.058641,0.070302,0.061807,0.9095,0.0,0.0,0.0,0.5989,1035,1,0,102
+OVERALL_ALL_FOLDS,-,-,-,4205,3749,456,0.122348,0.117045,0.122683,0.112098,0.7436,0.1244,0.2259,0.1604,0.4939,3024,725,103,353
